@@ -7,7 +7,7 @@ const server = express()
 server.use(express.json())
 
 server.get('/',(req,res)=>{
-    const myWords = process.env.MSG || "It is a great moment to learn Node js"
+    const myWords = process.env.FUN_FACT || "You can make it to the end"
     res.status(200).json({message: myWords})
 })
  
