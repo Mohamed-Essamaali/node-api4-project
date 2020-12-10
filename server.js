@@ -7,8 +7,9 @@ const server = express()
 server.use(express.json())
 
 server.get('/',(req,res)=>{
-    const myWords = process.env.FUN_FACT || "You can make it to the end"
-    res.status(200).json({message: myWords})
+    const myWords = process.env.FUN_FACT || "You can't make it without fun facts"
+    const Welcome = process.env.COHORT
+    res.status(200).json({message: myWords,Welcome})
 })
  
 const port = process.env.PORT || 5000
